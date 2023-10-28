@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ViewModelsDemos.Views.NotePageList"
+             xmlns:vm="clr-namespace:ViewModelsDemos.ViewModels"
+             x:DataType="vm:NoteViewModel"
+             xmlns:models="clr-namespace:ViewModelsDemos.Models"
+             Title="NotePageList">
+    
+    
+    <VerticalStackLayout>
+
+        <ListView x:Name="listview" SelectionMode="Single" ItemTapped="listview_ItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="models:Note">
+                    <TextCell Text="{Binding note}" Detail="{Binding dateTime}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+        
+    </VerticalStackLayout>
+</ContentPage>

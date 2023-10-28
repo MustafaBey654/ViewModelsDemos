@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ViewModelsDemos.Views.NoteDetails"
+             xmlns:vm="clr-namespace:ViewModelsDemos.ViewModels"
+             x:DataType="vm:NoteViewModel"
+             Title="Note Detail">
+    <VerticalStackLayout>
+        <Label 
+            Text="{Binding Note}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Entry x:Name="entryDetail" Placeholder="{Binding Note}" Text="{Binding Note}" />
+
+        <Button x:Name="UpdtaBtn" Text="UpdateNow" Clicked="UpdtaBtn_Clicked"/>
+       
+    </VerticalStackLayout>
+</ContentPage>
