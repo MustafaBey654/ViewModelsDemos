@@ -26,6 +26,7 @@ namespace ViewModelsDemos.ViewModels
         public NoteViewModel()
         {
             Notelist = new ObservableCollection<Note>();
+            Console.Writeln("Notelist oluşturuldu.");
         }
 
         [RelayCommand]
